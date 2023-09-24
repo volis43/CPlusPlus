@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34031.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChanfeObo", "ChanfeObo.vcxproj", "{DDE0E2EA-D043-4679-9AC4-58E6A4FCA43E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDE0E2EA-D043-4679-9AC4-58E6A4FCA43E}.Debug|x64.ActiveCfg = Debug|x64
+		{DDE0E2EA-D043-4679-9AC4-58E6A4FCA43E}.Debug|x64.Build.0 = Debug|x64
+		{DDE0E2EA-D043-4679-9AC4-58E6A4FCA43E}.Debug|x86.ActiveCfg = Debug|Win32
+		{DDE0E2EA-D043-4679-9AC4-58E6A4FCA43E}.Debug|x86.Build.0 = Debug|Win32
+		{DDE0E2EA-D043-4679-9AC4-58E6A4FCA43E}.Release|x64.ActiveCfg = Release|x64
+		{DDE0E2EA-D043-4679-9AC4-58E6A4FCA43E}.Release|x64.Build.0 = Release|x64
+		{DDE0E2EA-D043-4679-9AC4-58E6A4FCA43E}.Release|x86.ActiveCfg = Release|Win32
+		{DDE0E2EA-D043-4679-9AC4-58E6A4FCA43E}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B04E4F9-36BE-4111-9A55-5263A1378929}
+	EndGlobalSection
+EndGlobal
