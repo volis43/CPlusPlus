@@ -1,4 +1,4 @@
-﻿#pragma once
+﻿
 
 void sizeList (int World, std::list<std::string> listok) {
 
@@ -54,6 +54,35 @@ void search(int World, std::list<std::string> listok) {
 		}
 	}
 }
+
+//void timeToDell(int World, std::list<std::string> listok) {
+	//std::cin >> World;
+
+	//for (int i = 0; i < World; i++) {
+	//	std::string words;
+		//std::cout << "Put wrds" << std::endl;
+	//	std::cin >> words;
+		//listok.push_back(words);
+
+	//}
+//}
+void changeIndex(std::list<std::string>& listok) {
+	int index, index1;
+	std::cout << "Enter the indexes of the words to swap: ";
+	std::cin >> index >> index1;
+	if (index < 0 || index >= listok.size() || index1 < 0 || index1 >= listok.size() || index == index1) {
+		std::cout << "Invalid indexes!\n";
+		return;
+	}
+	auto it1 = std::next(listok.begin(), index);
+	auto it2 = std::next(listok.begin(), index1);
+	std::swap(*it1, *it2);
+	std::cout << "List after swapping:\n";
+	for (std::string g : listok) {
+		std::cout << g << "\n";
+	}
+}
+
 
 //Если делать удаления то +визуал и надо int ( )!!!!!!
 //Если делать удаления то +визуал и надо int ( )!!!!!!

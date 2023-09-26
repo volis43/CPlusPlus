@@ -27,7 +27,10 @@ public:
 			//std::cout << g << "\n";
 		//}
 		search(World, listok);
+
+		//timeToDell(World, listok);
 		
+		changeIndex(listok);
 	}
 
 
