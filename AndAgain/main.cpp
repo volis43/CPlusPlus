@@ -12,15 +12,24 @@ public:
 class Visual {
 public:
 	std::string mem = "( 1 ) ( 2 ) ( 3 ) ( 4 )";
+	
+};
+
+class Ram {
+public:
+	std::string ram = "  \n \n \t  ( ) ";
+	int rami = 1;
 };
 
 int main() {
 	List mylis;
 	Visual myMem;
+	Ram myRam;
 
 	std::cout << myMem.mem;
+	std::cout << myRam.ram;
 
-	//std::list<int> list{ 1, 2, 3, 4 };
+	
 	int choose = 0;
 	std::cin >> choose;
 
@@ -28,7 +37,7 @@ int main() {
 
 	case 2: 
 		std::cout << "change element";
-		
+		break;
 		
 	case 1:
 		int y = 0;
@@ -49,7 +58,7 @@ int main() {
 		else {
 			std::cout << y << " was not found in the list!!!" << std::endl;
 		}
-
+		break;
 	}
 		return 0;
 }
