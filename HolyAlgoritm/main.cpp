@@ -11,27 +11,33 @@ public:
 
 };
 
+void menu() {
+	int choose = 0;
+	std::cout << "1) Ener size list!!!" << std::endl;
+	std::cout << "2) insert - add" << std::endl;
+}
+
+int main() {
+	//List mylis;
+	//mylis.list;
+	//Сделать выбор в меню 1 2 3 4!!!
+
+	std::cout << "Enter size list! ";
+	std::list<std::string> listok = {};
+	int World = 0;
+
+	sizeList(World, listok);
+	
+	
+
+	
+	search(World, listok);
+	
 
 
-	int main() {
+	search(World, listok);
 
-		//Сделать выбор в меню 1 2 3 4!!!
+	//timeToDell(World, listok);
 
-		std::cout << "Enter size list! ";
-		int World = 0;
-		std::list<std::string> listok = {};
-		
-		sizeList(World, listok);
-		
-		//for (std::string g : listok) {
-			//std::cout << g << "\n";
-		//}
-		search(World, listok);
-
-		//timeToDell(World, listok);
-		
-		changeIndex(listok);
-	}
-
-
-
+	//changeIndex(mylis.listok);
+}
