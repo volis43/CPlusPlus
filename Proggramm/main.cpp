@@ -1,7 +1,7 @@
 #include <Windows.h>
 #include "resource.h";
 #include "SoftWareDefinitions.h";
-
+#include <mmsystem.h>
 
 
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInt, LPSTR args, int ncmdshow) {
@@ -87,6 +87,8 @@ void MainWndAddMenus(HWND hWnd) {
 	HMENU SubMenu = CreateMenu();
 
 	HMENU SubActionMenu = CreateMenu();
+	
+	PlaySound("G:\\TampleOs.wav", NULL, SND_FILENAME | SND_ASYNC);
 
 	AppendMenu(SubActionMenu, MF_STRING, OnMenuAction1, L"Menu 1");
 	AppendMenu(SubActionMenu, MF_STRING, OnMenuAction2, L"Menu 2");
