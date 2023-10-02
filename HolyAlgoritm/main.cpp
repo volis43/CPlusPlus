@@ -10,49 +10,26 @@ HANDLE hConsole;
 class HolyList {
 public:
     std::vector<int> numbers{ 1, 2, 3, 4, 1 };
-
-
-    void booleanList(HolyList& list) {
-        std::vector<bool> isFalse(numbers.size(), false);
-
-        int currentIndex = 0;
-
-        while (true) {
-            if (!isFalse[currentIndex]) {
-
-                std::cout << " NUmbers " << numbers[currentIndex] << " Sosto" << isFalse[currentIndex];
-
-                isFalse[currentIndex] = true;
-            }
-
-            currentIndex = (currentIndex + 1) % numbers.size();
-
-            bool allTrue = true;
-            for (bool b : isFalse) {
-                if (!b) {
-                    allTrue = false;
-                    break;
-                }
-            }
-            if (allTrue) {
-                break;
-            }
-        }
+    
     };
 
-    
-    void io(HolyList& list) {
-        std::cout << "\n";
-        for (int t : list.numbers) {
-            std::cout << " " << t;
-        }
+void flagi(HolyList& list) {
+    for (int i = 0; i < list.numbers.size(); i++)
+    {
+        // io(list);
+        list.numbers[i] = false;
     }
+};
 
+
+void io(HolyList& list) {
+    std::cout << "\n";
+    for (int t : list.numbers) {
+        std::cout << " " << t;
+    }
+};
 
     int main() {
-
-        
-        
 
         int choose = 0;
         int index = 0;
@@ -60,8 +37,13 @@ public:
         int put = 0;
         int dell = 0;
         int prov = 0;
+        int n1 = 0;
+        int n2 = 0;
 
         HolyList list;
+
+        
+        
 
         auto id = list.numbers.begin();
 
@@ -153,13 +135,33 @@ public:
         case 7:
             std::cout << "Loop boolean" << std::endl;
 
-            list.booleanList(list);
+            io(list);
 
+            std::cout << "\nEnter 2 elements to loop: ";
+            int n1, n2;
+            std::cin >> n1 >> n2;
+
+            std::cout << "First element: " << n1 << std::endl;
+            std::cout << "Second element: " << n2 << std::endl;
+
+            list.numbers[n1] = false;
+            list.numbers[n2] = false;
+
+            for (int i = 0; i < list.numbers.size(); i++) {
+                if (list.numbers[i] == false) {
+                    std::cout << "\nFirst false element index: " << i << std::endl;
+                    break;
+                }
+            }
+
+            io(list);
 
             break;
         case 8:
-            std::cout << "Is 8" << std::endl;
+            std::cout << "Loop " << std::endl;
+
             break;
+
         case 9:
 
             std::cout << "Remove(#)" << std::endl;
@@ -191,11 +193,10 @@ public:
                 Sleep(1000);
                 std::cout << " Successfull removed " << dell << "!" << std::endl;
             }
-
-            else {
+        
+            else
+            {
                 std::cout << " Number not find" << std::endl;
-
-
             }
 
             SetConsoleTextAttribute(hConsole, 2);
