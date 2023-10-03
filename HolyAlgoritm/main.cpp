@@ -16,7 +16,7 @@ public:
 void flagi(HolyList& list) {
     for (int i = 0; i < list.numbers.size(); i++)
     {
-        // io(list);
+       
         
     }
 };
@@ -24,20 +24,18 @@ void flagi(HolyList& list) {
 
 void io(HolyList& list) {
     std::cout << "\n";
-    for (int t : list.numbers) {
+    for (int t : list.numbers) 
+    {
         std::cout << " " << t;
     }
 };
 
-
-
-
-
-
     int main() {
         
         HolyList list;
-        while(true){
+
+        while(true)
+        {
 
         int choose = 0;
         int index = 0;
@@ -58,14 +56,15 @@ void io(HolyList& list) {
         hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
         SetConsoleTextAttribute(hConsole, 6);
 
-        std::cout << "1) check \n2) add() \n3) switch(#, #2) \n5) get(#) \n6) size() \n7) loop() ? \n8) loop list () \n9) remove(#) \n---------------- \n10) gdData() \n11) SetData(#) \n12) next --> number" << std::endl;
+        std::cout << "\n1) check \n2) add() \n3) switch(#, #2) \n4) next --> number \n5) get(#) \n6) size() \n7) loop() ? \n8) loop list () \n9) remove(#) \n----------------  \n10) Exit " << std::endl;
 
         io(list);
 
         std::cout << "\n";
         std::cin >> choose;
 
-        switch (choose) {
+        switch (choose) 
+        {
 
         case 1:
             std::cout << "Just check element in list ;) " << std::endl;
@@ -83,8 +82,6 @@ void io(HolyList& list) {
             std::cin >> num;
 
             list.numbers.push_back(num);
-
-            
 
             io(list);
             break;
@@ -104,11 +101,10 @@ void io(HolyList& list) {
             break;
 
         case 4:
-            while (true) {
-                
-                
+            while (true) 
+            {
 
-                std::cout << " Is 12 Next numbers() --> ";
+                std::cout << " Is  Next numbers() --> ";
                 std::cin >> nexti;
                 it = std::find(list.numbers.begin(), list.numbers.end(), nexti);
                 if (it != list.numbers.end()) {
@@ -124,9 +120,7 @@ void io(HolyList& list) {
                         }
                         else if (End == "N" || "n") {
                             continue;
-                        }
-                        
-                        
+                        }         
                     }
                     else {
                         std::cout << "No next number";
@@ -164,6 +158,7 @@ void io(HolyList& list) {
             std::cout << "Size list " << std::endl;
             std::cout << list.numbers.size();
             break;
+
         case 7:
             std::cout << "Loop boolean" << std::endl;
 
@@ -179,8 +174,10 @@ void io(HolyList& list) {
             list.numbers[n1] = false;
             list.numbers[n2] = false;
 
-            for (int i = 0; i < list.numbers.size(); i++) {
-                if (list.numbers[i] == false) {
+            for (int i = 0; i < list.numbers.size(); i++) 
+            {
+                if (list.numbers[i] == false) 
+                {
                     std::cout << "\nFirst false element index: " << i << std::endl;
                     break;
                 }
@@ -192,8 +189,10 @@ void io(HolyList& list) {
         case 8:
             std::cout << "Loop " << std::endl;
             
-            for (int i = 0; i < list.numbers.size(); i++) {
-                if (list.numbers[i] == 0) {
+            for (int i = 0; i < list.numbers.size(); i++) 
+            {
+                if (list.numbers[i] == 0) 
+                {
                     break; 
                 }
 
@@ -234,7 +233,8 @@ void io(HolyList& list) {
 
             id = std::find(list.numbers.begin(), list.numbers.end(), dell);
 
-            if (id != list.numbers.end()) {
+            if (id != list.numbers.end()) 
+            {
                 list.numbers.erase(id);
                 Sleep(1000);
                 std::cout << " Successfull removed " << dell << "!" << std::endl;
@@ -251,12 +251,11 @@ void io(HolyList& list) {
             io(list);
 
             break;
-        case 10:
-            std::cout << "Is 10" << std::endl;
-            break;
+       
         
-        case 14:
+        case 10:
             return 0;
+            break;
 }
 
         }
