@@ -9,7 +9,7 @@ HANDLE hConsole;
 
 class HolyList {
 public:
-    std::vector<int> numbers{ 1, 2, 3, 4, 1 };
+    std::vector<int> numbers{ 1, 2, 3, 4 };
     
     };
 
@@ -17,7 +17,7 @@ void flagi(HolyList& list) {
     for (int i = 0; i < list.numbers.size(); i++)
     {
         // io(list);
-        list.numbers[i] = false;
+        
     }
 };
 
@@ -30,6 +30,9 @@ void io(HolyList& list) {
 };
 
     int main() {
+        
+        HolyList list;
+        while(true){
 
         int choose = 0;
         int index = 0;
@@ -40,28 +43,13 @@ void io(HolyList& list) {
         int n1 = 0;
         int n2 = 0;
 
-        HolyList list;
-
-        
-        
 
         auto id = list.numbers.begin();
 
         hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
         SetConsoleTextAttribute(hConsole, 6);
 
-        std::cout << "1) check" << std::endl;
-        std::cout << "2) add()" << std::endl;
-        std::cout << "3) switch(#, #2)" << std::endl;
-        std::cout << "5) get(#)" << std::endl;
-        std::cout << "6) size()" << std::endl;
-        std::cout << "7) loop() ?" << std::endl;
-        std::cout << "8) loop list ()" << std::endl;
-        std::cout << "9) remove(#)" << std::endl;
-        std::cout << "----------------" << std::endl;
-        std::cout << "10) gdData()" << std::endl;
-        std::cout << "11) SetData(#)" << std::endl;
-        std::cout << "12) next --> number" << std::endl;
+        std::cout << "1) check \n2) add() \n3) switch(#, #2) \n5) get(#) \n6) size() \n7) loop() ? \n8) loop list () \n9) remove(#) \n---------------- \n10) gdData() \n11) SetData(#) \n12) next --> number" << std::endl;
 
         io(list);
 
@@ -87,6 +75,8 @@ void io(HolyList& list) {
 
             list.numbers.push_back(num);
 
+            
+
             io(list);
             break;
 
@@ -105,7 +95,7 @@ void io(HolyList& list) {
             break;
 
         case 4:
-            std::cout << "Is 4 " << std::endl;
+            std::cout << "Is 12 " << std::endl;
             break;
         case 5:
             std::cout << "Get(#)" << std::endl;
@@ -159,7 +149,13 @@ void io(HolyList& list) {
             break;
         case 8:
             std::cout << "Loop " << std::endl;
-
+            
+            while (true) {
+                list.numbers[1];
+                if (list.numbers[2]) {
+                    break;
+                }
+            }
             break;
 
         case 9:
@@ -208,7 +204,11 @@ void io(HolyList& list) {
         case 10:
             std::cout << "Is 10" << std::endl;
             break;
-        }
+        
+        case 14:
+            return 0;
+}
 
+        }
         return 0;
     }
