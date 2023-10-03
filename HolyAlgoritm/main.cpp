@@ -29,6 +29,11 @@ void io(HolyList& list) {
     }
 };
 
+
+
+
+
+
     int main() {
         
         HolyList list;
@@ -42,7 +47,11 @@ void io(HolyList& list) {
         int prov = 0;
         int n1 = 0;
         int n2 = 0;
+        int nexti = 0;
+        
+        std::string End = "Y";
 
+        auto it = std::find(list.numbers.begin(), list.numbers.end(), nexti);
 
         auto id = list.numbers.begin();
 
@@ -95,8 +104,41 @@ void io(HolyList& list) {
             break;
 
         case 4:
-            std::cout << "Is 12 " << std::endl;
+            while (true) {
+                
+                
+
+                std::cout << " Is 12 Next numbers() --> ";
+                std::cin >> nexti;
+                it = std::find(list.numbers.begin(), list.numbers.end(), nexti);
+                if (it != list.numbers.end()) {
+                    auto next = it + 1;
+                    if (next != list.numbers.end()) {
+                        std::cout << *next;
+                        std::cout << " to finish? Y / N ? " << std::endl;
+                        
+                        std::cin >> End;
+                        
+                        if (End == "Y" || "y") {
+                            break;
+                        }
+                        else if (End == "N" || "n") {
+                            continue;
+                        }
+                        
+                        
+                    }
+                    else {
+                        std::cout << "No next number";
+                        
+                    }
+                }
+                else {
+                    std::cout << "Not Found";
+                }
+            } 
             break;
+
         case 5:
             std::cout << "Get(#)" << std::endl;
 
@@ -150,12 +192,20 @@ void io(HolyList& list) {
         case 8:
             std::cout << "Loop " << std::endl;
             
-            while (true) {
-                list.numbers[1];
-                if (list.numbers[2]) {
-                    break;
+            for (int i = 0; i < list.numbers.size(); i++) {
+                if (list.numbers[i] == 0) {
+                    break; 
                 }
+
+                list.numbers[i] = 0; 
+                io(list); 
+
+                list.numbers[i] = 1; 
+
+                io(list); 
+                
             }
+                return 0;
             break;
 
         case 9:
