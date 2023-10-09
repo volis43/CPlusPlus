@@ -4,6 +4,7 @@
 #define OnMenuAction3   3
 #define OnExitSoftware  4
 #define OnButtonClicked 5
+#define OnButtonClicked1 6
 
 HWND hEditControl;
 
