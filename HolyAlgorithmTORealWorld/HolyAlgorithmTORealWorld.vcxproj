@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{072613d1-96ac-4c93-9c58-5a87ddedd4be}</ProjectGuid>
-    <RootNamespace>binari</RootNamespace>
+    <ProjectGuid>{c077d038-78c1-4deb-9ec1-ce108781db66}</ProjectGuid>
+    <RootNamespace>HolyAlgorithmTORealWorld</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h" />
+    <ClCompile Include="HolyAlgorithmTORealWorld.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

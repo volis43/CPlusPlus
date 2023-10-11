@@ -45,9 +45,12 @@ int main ()
 	}
 	
 	std::vector<int> arr = {go};
-	for (int n : arr) {
+	
+	for (int n : arr) 
+	{
 		std::cout << n;
 	}
+	
 	
 	
 	
