@@ -10,91 +10,98 @@
 
 // what - с чем сравнивать: объект - экземпляр класса, реализущего интерфейс MyComparable
 
-class stringi
+bool hasDupl(const std::vector<std::string>& items)
 {
-public:
-	std::vector<std::string> fio{ };
-};
+    std::vector<std::string> sortedItems(items);
 
+    auto last = std::unique(sortedItems.begin(), sortedItems.end());
 
-class ide 
-{
-public:
-	std::vector<std::string> id{ };
-
-};
-
-class erattos 
-{
-public:
-	std::vector<std::string> error{ };
-};
-
-bool hasDupl(const std::vector<std::string>& ids)
-{
-	std::vector<std::string> sortedIDS(ids);
-
-	auto last = std::unique(sortedIDS.begin(), sortedIDS.end());
-
-	return last != sortedIDS.end();
+    return last != sortedItems.end();
 }
-
 
 int main()
 {
-	while (true) {
+    std::vector<std::string> C = {"C"};
+    std::vector<std::string> ids;
+    std::vector<std::string> fia;
+    std::vector<std::string> Name;
+    std::vector<std::string> Otchestvo;
+    std::vector<std::string> errs;
 
-		stringi fia;
-		ide ids;
-		erattos errs;
-		/*int ds = 0;*/
-		std::string ds;
-		std::string familia;
-		std::string name;
-		std::string otchestvo;
+    while (true) {
 
-		std::string err;
+        
+        std::string ds;
+        std::string familia;
+        std::string name;
+        std::string otchestvo;
+        std::string err;
+        
 
-		std::cin >> ds;
+        std::string choice;
 
-		ids.id.push_back(ds);
+        std::cin >> choice;
 
-		// Тут нужно сделать стринг чтоб помнил i и s  . 220997
-
-		for (int u = 0; u < ids.id.size(); u++)
-		{
-			std::cout << ids.id[u] << ",";  // Тут нужно убить запятую!!! А иначе выкени свой комп в мусорку
-
-			bool hasDuplicatesIds = hasDupl(ids.id);
-			
-			if (hasDuplicatesIds) {
-				std::cout << "Вектор ids содержит повторяющиеся символы." << std::endl;
-			}
-		}
-
-		std::cout << "Input familia, name, otchestvo" << std::endl;
-
-		std::cin >> familia;
-		std::cin >> name;
-		std::cin >> otchestvo;
-
-		fia.fio.push_back(familia);
-		fia.fio.push_back(name);
-		fia.fio.push_back(otchestvo);
-
-		for (int i = 0; i < fia.fio.size(); i++)
-		{
-			std::cout << fia.fio[i] << ",";  // Тут нужно убить запятую!!! А иначе выкени свой комп в мусорку 
-
-		  /*for (int i = 0; i < fia.fio.size(); i++)
-				std::cout << fia.fio[i] << ", ";*/
-		}
+        if (choice == "C")
+        {
+           
+            
+            std::cout << " You add new student || student's " << std::endl;
+            std::cout << " id ";
+            std::cin >> ds;
 
 
-		std::cin >> err;
+            ids.push_back(ds);
+            
+            std::cout << " familia, name, otchestvo: ";
+            std::cin >> familia >> name >> otchestvo;
 
-		errs.error.push_back(err);
+            fia.push_back(familia);
+            Name.push_back(name);
+            Otchestvo.push_back(otchestvo);
 
-	}
+            std::cout << " error ";
+            std::cin >> err;
+            errs.push_back(err);
 
+            for (int y = 0; y < C.size(); y++)
+            {
+                std::cout << C[y] << " " ;
+            }
+
+            for (int i = 0; i < ids.size(); i++) 
+            {
+                std::cout << ids[i] << ",";
+            }
+
+            for (int q = 0; q < fia.size(); q++)
+            {
+                std::cout << fia[q] << ",";
+            }
+
+            for (int k = 0; k < Name.size(); k++)
+            {
+                std::cout << Name[k] << ",";
+            }
+
+            for (int j = 0; j < Otchestvo.size(); j++)
+            {
+                std::cout << Otchestvo[j];
+            }
+
+            bool hasDuplicatesIds = hasDupl(ids);
+
+
+            if (hasDuplicatesIds) {
+                std::cout << " DUPLICATE " << std::endl;
+            }
+
+           
+        } 
+        else if (choice == "R") 
+        {
+            std::cout << " Put number " << std::endl;
+        }
+    }
+    return 0;
 }
