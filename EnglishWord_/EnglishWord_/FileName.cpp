@@ -17,15 +17,23 @@ int main()
 	setlocale(LC_ALL, "rus");
 	/*PlaySound(TEXT("p1.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);*/
 
+	
+
+	//std::string arrEnglishWords[] = { "able", "above", "across", "act", "actually", "admit", "afraid", "afternoon", "agains", "agree", "ahead", "allow", "almost", "along", "although", "amaze", "annoy" };
+	///*{"Fork", "plates", "Nature", "diligence", "jabber", "jaw", "tooth", "fist", "justify", "shelves", "Apparent"};*/
+	///*"Fry", "hire", "imaginary", "indeed", "lay", "Leaf", "lip", "mainly", "mess", "Mood", "mud", "nail", "net", "pail", "Pot", "fork"*/ // можно сделать ссылку на массив строк?
+	//std::string arrRusWords[] = { "способный", "выше", "через", "действовать", "на самом деле", "признавать", "испуганный", "полдень", "против", "соглашаться", "предстоящий", "позволять", "почти", "вдоль", "хотя", "удивлять", "раздражать" };
+	
+	// 
+	//{"Вилка", "тарелки", "Природа", "старание", "болтать", "челюсть", "зуб", "Кулак", "оправдывать", "полки", "Очевидный"}; /*"Жарить", "Нанимать", "воображение", "действительно", "класть", "Лист", "Губа", "в основном", "беспорядок", "Настроение", "Грязь", "Ноготь", "Сеть", "Бледный", "горшок", "Вилка"*/
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
-	std::string arrEnglishWords[] = { "able", "above", "across", "act", "actually", "admit", "afraid", "afternoon", "agains", "agree", "ahead", "allow", "almost", "along", "although", "amaze", "annoy" };
-	/*{"Fork", "plates", "Nature", "diligence", "jabber", "jaw", "tooth", "fist", "justify", "shelves", "Apparent"};*/
-	/*"Fry", "hire", "imaginary", "indeed", "lay", "Leaf", "lip", "mainly", "mess", "Mood", "mud", "nail", "net", "pail", "Pot", "fork"*/ // можно сделать ссылку на массив строк?
-	std::string arrRusWords[] = { "способный", "выше", "через", "действовать", "на самом деле", "признавать", "испуганный", "полдень", "против", "соглашаться", "предстоящий", "позволять", "почти", "вдоль", "хотя", "удивлять", "раздражать" };
-	
-	//{"Вилка", "тарелки", "Природа", "старание", "болтать", "челюсть", "зуб", "Кулак", "оправдывать", "полки", "Очевидный"}; /*"Жарить", "Нанимать", "воображение", "действительно", "класть", "Лист", "Губа", "в основном", "беспорядок", "Настроение", "Грязь", "Ноготь", "Сеть", "Бледный", "горшок", "Вилка"*/
-	
+	std::string arrPTR[] = { "able", "above", "across", "act", "actually", "admit", "afraid", "afternoon", "agains", "agree", "ahead", "allow", "almost", "along", "although", "amaze", "annoy" };
+	std::string(&arrEnglishWords)[std::size(arrPTR)] = arrPTR;
+	std::string arrPTRpack2[]{ "Fork", "plates", "Nature", "diligence", "jabber", "jaw", "tooth", "fist", "justify", "shelves", "Apparent" };
+
+	std::string arrPer[]{ "способный", "выше", "через", "действовать", "на самом деле", "признавать", "испуганный", "полдень", "против", "соглашаться", "предстоящий", "позволять", "почти", "вдоль", "хотя", "удивлять", "раздражать" };
+	std::string(&arrRusWords)[std::size(arrPer)] = arrPer;
 	int sizeWords = sizeof(arrEnglishWords) / sizeof(arrEnglishWords[0]);
 
 	std::srand(static_cast<unsigned int>(std::time(0)));
