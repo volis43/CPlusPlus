@@ -32,6 +32,9 @@ int main()
 	std::string(&arrEnglishWords)[std::size(arrPTR)] = arrPTR;
 	std::string arrPTRpack2[]{ "Fork", "plates", "Nature", "diligence", "jabber", "jaw", "tooth", "fist", "justify", "shelves", "Apparent" };
 
+	std::string are[]{ "wing", "cork", "comb", "spatula", "entail", "deem" };
+	std::string ares[]{ "крыло", "пробка", "расческа", "шпатель", "влечь за собой", "считать" };
+
 	std::string arrPer[]{ "способный", "выше", "через", "действовать", "на самом деле", "признавать", "испуганный", "полдень", "против", "соглашаться", "предстоящий", "позволять", "почти", "вдоль", "хотя", "удивлять", "раздражать" };
 	std::string(&arrRusWords)[std::size(arrPer)] = arrPer;
 	int sizeWords = sizeof(arrEnglishWords) / sizeof(arrEnglishWords[0]);
